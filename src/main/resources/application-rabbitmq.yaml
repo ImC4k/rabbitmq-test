@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        emitPerson-out-0:
+          destination: person/in
+        receivePerson-in-0:
+          destination: person/in
+      function:
+        definition: emitPerson;receivePerson
